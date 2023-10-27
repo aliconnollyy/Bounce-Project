@@ -12,7 +12,9 @@ app.get('/country/:name', async (req, res) => {
         const data = await response.json();
         // sending result back to client
         res.json(data);
-    } catch (error) {
+    } 
+    catch (error)
+    {
         console.error('Error:', error);
         res.status(500).json({ error: 'An error occurred while making the API call' });
     }
